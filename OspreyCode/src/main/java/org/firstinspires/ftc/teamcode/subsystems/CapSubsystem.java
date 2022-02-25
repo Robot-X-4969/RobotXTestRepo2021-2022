@@ -1,15 +1,25 @@
 package org.firstinspires.ftc.teamcode.subsystems;
 
-import static org.firstinspires.ftc.teamcode.subsystems.CapSubsystem.CapConstants.*;
-
 import com.acmerobotics.dashboard.config.Config;
 import com.technototes.library.command.CommandScheduler;
 import com.technototes.library.hardware.servo.Servo;
 import com.technototes.library.hardware.servo.ServoProfiler;
 import com.technototes.library.subsystem.Subsystem;
 
-
 import java.util.function.Supplier;
+
+import static org.firstinspires.ftc.teamcode.subsystems.CapSubsystem.CapConstants.ARM_CAP;
+import static org.firstinspires.ftc.teamcode.subsystems.CapSubsystem.CapConstants.ARM_CONSTRAINTS;
+import static org.firstinspires.ftc.teamcode.subsystems.CapSubsystem.CapConstants.ARM_DOWN;
+import static org.firstinspires.ftc.teamcode.subsystems.CapSubsystem.CapConstants.ARM_INIT;
+import static org.firstinspires.ftc.teamcode.subsystems.CapSubsystem.CapConstants.ARM_UP;
+import static org.firstinspires.ftc.teamcode.subsystems.CapSubsystem.CapConstants.CLAW_CLOSE;
+import static org.firstinspires.ftc.teamcode.subsystems.CapSubsystem.CapConstants.CLAW_OPEN;
+import static org.firstinspires.ftc.teamcode.subsystems.CapSubsystem.CapConstants.TURRET_CAP;
+import static org.firstinspires.ftc.teamcode.subsystems.CapSubsystem.CapConstants.TURRET_CARRY;
+import static org.firstinspires.ftc.teamcode.subsystems.CapSubsystem.CapConstants.TURRET_CONSTRAINTS;
+import static org.firstinspires.ftc.teamcode.subsystems.CapSubsystem.CapConstants.TURRET_INIT;
+import static org.firstinspires.ftc.teamcode.subsystems.CapSubsystem.CapConstants.TURRET_PICKUP;
 
 
 public class CapSubsystem implements Subsystem, Supplier<String> {
