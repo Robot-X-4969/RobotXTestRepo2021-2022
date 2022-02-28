@@ -6,6 +6,8 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
+import org.firstinspires.ftc.teamcode.opmodes.robotx.opmodes.autonomous.Opencv;
+
 import static org.firstinspires.ftc.robotcore.external.BlocksOpModeCompanion.opMode;
 
 
@@ -20,9 +22,12 @@ public class EncoderTester extends LinearOpMode {
     public DcMotor backRight;
     MecanumDrive mecanumDrive;
 
+    public EncoderTester (Opencv opencv) {
+    }
+
 
     @Override
-    public void runOpMode() throws InterruptedException {
+    public void runOpMode() throws InterruptedException  {
         //front left motor
         frontLeft = opMode.hardwareMap.dcMotor.get("frontLeft");
 

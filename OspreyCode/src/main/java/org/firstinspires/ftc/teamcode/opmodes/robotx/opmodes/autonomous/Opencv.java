@@ -78,6 +78,9 @@
         liftSystem = new LiftSystem(this);
         liftSystem.init();
 
+        encoderTester = new EncoderTester(this);
+        encoderTester.init();
+
         mecanumDrive.start();
         duckRotation.start();
         intakeSystem.start();
@@ -136,7 +139,7 @@
             if (pipeline.avg1 >= 95 && pipeline.avg1 <= 115) {
                 DriveForward(1,100);
                 x=1;
-
+                DriveForwardDistance(.5, 700);
                 // rest of first movement
 
 
